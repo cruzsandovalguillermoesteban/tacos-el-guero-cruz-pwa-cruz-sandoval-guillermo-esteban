@@ -1,0 +1,17 @@
+[
+  {"id":1,"nombre":"Taco de asada","categoria":"Tacos","precio":28,"stock":20,"imagen":"img/taco-de-asada.jpg"},
+  {"id":2,"nombre":"Taco de adobada","categoria":"Tacos","precio":28,"stock":20,"imagen":"img/taco-de-adobada.jpg"},
+  {"id":3,"nombre":"Taco de cabeza","categoria":"Tacos","precio":30,"stock":20,"imagen":"img/taco-de-cabeza.jpg"},
+  {"id":4,"nombre":"Taco de tripa dorada","categoria":"Tacos","precio":32,"stock":20,"imagen":"img/taco-de-tripa-dorada.jpg"},
+  {"id":5,"nombre":"Taco de lengua","categoria":"Tacos","precio":35,"stock":20,"imagen":"img/taco-de-lengua.jpg"},
+  {"id":6,"nombre":"Vampiro de asada","categoria":"Especialidades","precio":55,"stock":20,"imagen":"img/vampiro-de-asada.jpg"},
+  {"id":7,"nombre":"Quesataco","categoria":"Especialidades","precio":40,"stock":20,"imagen":"img/quesataco.jpg"},
+  {"id":8,"nombre":"Caramelo","categoria":"Especialidades","precio":60,"stock":20,"imagen":"img/caramelo.jpg"},
+  {"id":9,"nombre":"Papa asada rellena","categoria":"Especialidades","precio":110,"stock":20,"imagen":"img/papa-asada-rellena.jpg"},
+  {"id":10,"nombre":"Orden de 5 tacos","categoria":"Especialidades","precio":130,"stock":20,"imagen":"img/orden-de-5-tacos.jpg"},
+  {"id":11,"nombre":"Agua de horchata","categoria":"Bebidas y extras","precio":30,"stock":20,"imagen":"img/agua-de-horchata.jpg"},
+  {"id":12,"nombre":"Agua de jamaica","categoria":"Bebidas y extras","precio":30,"stock":20,"imagen":"img/agua-de-jamaica.jpg"},
+  {"id":13,"nombre":"Refresco de vidrio","categoria":"Bebidas y extras","precio":30,"stock":20,"imagen":"img/refresco-de-vidrio.jpg"},
+  {"id":14,"nombre":"Frijoles charros","categoria":"Bebidas y extras","precio":35,"stock":20,"imagen":"img/frijoles-charros.jpg"},
+  {"id":15,"nombre":"Cebollitas asadas","categoria":"Bebidas y extras","precio":25,"stock":20,"imagen":"img/cebollitas-asadas.jpg"}
+]
