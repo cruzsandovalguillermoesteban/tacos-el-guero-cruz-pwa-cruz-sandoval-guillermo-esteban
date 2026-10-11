@@ -4,7 +4,7 @@
 |---|---|
 | **Alumno** | CRUZ SANDOVAL GUILLERMO ESTEBAN |
 | **Grupo** | ING10-1 |
-| **Negocio · giro** | Nombre de tu negocio · Taquería estilo sonorense|
+| **Negocio · giro** | Tacos El Güero Cruz · Taquería estilo sonorense|
 | **URL del repositorio** | https://github.com/cruzsandovalguillermoesteban/tacos-el-guero-cruz-pwa-cruz-sandoval-guillermo-esteban|
 | **URL de GitHub Pages** | https://cruzsandovalguillermoesteban.github.io/tacos-el-guero-cruz-pwa-cruz-sandoval-guillermo-esteban/ |
 
