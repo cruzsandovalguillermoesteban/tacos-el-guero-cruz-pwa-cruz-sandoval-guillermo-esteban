@@ -1,0 +1,15 @@
+# Tacos El Güero Cruz — PWA de ventas
+
+| Dato | Valor |
+|---|---|
+| **Alumno** | CRUZ SANDOVAL GUILLERMO ESTEBAN |
+| **Grupo** | ING10-1 |
+| **Negocio · giro** | Nombre de tu negocio · Taquería estilo sonorense|
+| **URL del repositorio** | https://github.com/cruzsandovalguillermoesteban/tacos-el-guero-cruz-pwa-cruz-sandoval-guillermo-esteban|
+| **URL de GitHub Pages** | https://cruzsandovalguillermoesteban.github.io/tacos-el-guero-cruz-pwa-cruz-sandoval-guillermo-esteban/ |
+
+## Historial de avances
+
+| Avance | Hash del commit entregado | Fecha |
+|---|---|---|
+| 1 | de78377 | 10/10/2026 |
