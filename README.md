@@ -13,3 +13,12 @@
 | Avance | Hash del commit entregado | Fecha |
 |---|---|---|
 | 1 | de78377 | 10/10/2026 |
+| 2 |         | 16/10/2026 |
+
+## Comparación SSR vs CSR
+
+### SSR (Django): los productos llegan escritos en el HTML
+![Código fuente SSR](docs/captura-ssr.png)
+
+### CSR (JavaScript): el div del catálogo llega vacío
+

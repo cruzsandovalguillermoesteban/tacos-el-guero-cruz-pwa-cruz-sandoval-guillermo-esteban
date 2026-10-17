@@ -1,0 +1,32 @@
+<!-- Plantilla Django: Tacos el Güero (SSR) -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Catálogo SSR — Tacos el Güero</title>
+  <style>
+    /* Estilos adaptados a los colores de tu marca */
+    body { font-family: system-ui, sans-serif; background: #fdfaf6; color: #1C1917; margin: 2rem; }
+    h1 { color: #DC2626; } /* Rojo taquero */
+    ul { list-style: none; padding: 0; max-width: 600px; }
+    li { background: #fff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1rem; margin-bottom: 0.8rem; }
+    .precio { font-weight: bold; color: #FACC15; background: #1C1917; padding: 3px 8px; border-radius: 5px; }
+    .categoria { color: #666; font-size: 0.9em; display: block; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h1>🌮 Nuestro Menú (SSR con Django)</h1>
+  <p>Este HTML ya viene con los productos de la taquería escritos. Haz "Ver código fuente" (Ctrl+U) y toma la captura de pantalla de los tacos para tu reporte.</p>
+
+  <ul>
+    <!-- El bucle "for" recorre la lista "productos" de Tacos el Güero -->
+    {% for producto in productos %}
+      <li>
+        <strong>{{ producto.nombre }}</strong> — 
+        <span class="precio">${{ producto.precio }}</span>
+        <span class="categoria">Categoría: {{ producto.categoria }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
