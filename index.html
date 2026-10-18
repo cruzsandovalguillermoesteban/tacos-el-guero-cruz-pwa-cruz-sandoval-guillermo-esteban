@@ -4,18 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- 1. CAMBIAMOS EL TÍTULO Y DESCRIPCIÓN -->
   <title>Tacos el Güero Cruz — PWA</title>
   <meta name="description" content="Tacos el Güero: Los mejores tacos de asada, tripa y especialidades sonorenses.">
 
-  <!-- 2. COMENTAMOS MANIFEST E ICONO (Se usan hasta el avance 3) -->
+  <!-- COMENTAMOS MANIFEST E ICONO -->
   <!-- <link rel="manifest" href="manifest.json"> -->
   <meta name="theme-color" content="#DC2626">
   <!-- <link rel="icon" href="icons/icon.svg" type="image/svg+xml"> -->
 
   <link rel="stylesheet" href="css/estilos.css">
 
-  <!-- 3. COMENTAMOS EL MAPA (Se usa hasta el avance 3) -->
+  <!-- ESTILOS PARA LOS BOTONES DE FILTRO TIPO PÍLDORA -->
+  <style>
+    .filtros-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+    .btn-filtro {
+      background: #1C1917;
+      color: white;
+      border: 1px solid #444;
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.95em;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-filtro.activo {
+      background: #DC2626;
+      color: white;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0 2px #DC2626;
+    }
+  </style>
+
+  <!-- COMENTAMOS EL MAPA -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"> -->
 </head>
 <body>
@@ -30,34 +57,28 @@
   </header>
   
   <main>
-    <!-- ---- Sección 1: Catálogo (CSR) ---- -->
+    <!-- ---- Sección 1: Catálogo (CSR) con Filtros ---- -->
     <section>
-      <h2>Nuestro Menú</h2>
+      <h2 style="text-align: center;">Nuestro Menú</h2>
+      
+      <!-- Botones de Filtro -->
+      <div class="filtros-container">
+        <button class="btn-filtro activo" data-categoria="Todos">Todos</button>
+        <button class="btn-filtro" data-categoria="Tacos">Tacos</button>
+        <button class="btn-filtro" data-categoria="Especialidades">Especialidades</button>
+        <button class="btn-filtro" data-categoria="Bebidas y extras">Bebidas y extras</button>
+      </div>
+
       <div id="catalogo" class="grid" aria-busy="true" aria-label="Cargando catálogo">
-        <div class="producto producto--cargando" aria-hidden="true">
-          <div class="producto__foto"></div>
-          <strong>&nbsp;</strong> <span class="precio">&nbsp;</span> <p>&nbsp;</p>
-          <button type="button" disabled>Agregar al carrito</button>
-        </div>
-        <div class="producto producto--cargando" aria-hidden="true">
-          <div class="producto__foto"></div>
-          <strong>&nbsp;</strong> <span class="precio">&nbsp;</span> <p>&nbsp;</p>
-          <button type="button" disabled>Agregar al carrito</button>
-        </div>
-        <div class="producto producto--cargando" aria-hidden="true">
-          <div class="producto__foto"></div>
-          <strong>&nbsp;</strong> <span class="precio">&nbsp;</span> <p>&nbsp;</p>
-          <button type="button" disabled>Agregar al carrito</button>
-        </div>
-        <div class="producto producto--cargando" aria-hidden="true">
-          <div class="producto__foto"></div>
-          <strong>&nbsp;</strong> <span class="precio">&nbsp;</span> <p>&nbsp;</p>
-          <button type="button" disabled>Agregar al carrito</button>
-        </div>
+        <!-- Esqueletos de carga -->
+        <div class="producto producto--cargando" aria-hidden="true"><div class="producto__foto"></div><strong>&nbsp;</strong><span class="precio">&nbsp;</span><p>&nbsp;</p><button type="button" disabled>Agregar al carrito</button></div>
+        <div class="producto producto--cargando" aria-hidden="true"><div class="producto__foto"></div><strong>&nbsp;</strong><span class="precio">&nbsp;</span><p>&nbsp;</p><button type="button" disabled>Agregar al carrito</button></div>
+        <div class="producto producto--cargando" aria-hidden="true"><div class="producto__foto"></div><strong>&nbsp;</strong><span class="precio">&nbsp;</span><p>&nbsp;</p><button type="button" disabled>Agregar al carrito</button></div>
+        <div class="producto producto--cargando" aria-hidden="true"><div class="producto__foto"></div><strong>&nbsp;</strong><span class="precio">&nbsp;</span><p>&nbsp;</p><button type="button" disabled>Agregar al carrito</button></div>
       </div>
     </section>
 
-    <!-- ---- Sección 2: Carrito (ACTUALIZADA Y CON ESTILO) ---- -->
+    <!-- ---- Sección 2: Carrito ---- -->
     <aside id="zona-carrito" style="border: 2px solid #DC2626; padding: 1rem; margin: 2rem 0; border-radius: 8px;">
       <h2 style="color: #DC2626; margin-top: 0;">🛒 Tu Pedido</h2>
       
@@ -91,13 +112,12 @@
   </main>
 
   <footer>
-    <!-- 5. PERSONALIZAMOS EL FOOTER CON TUS DATOS -->
     <p>Tacos el Güero Cruz © 2026</p>
     <p>Alumno: Cruz Sandoval Guillermo Esteban</p>
   </footer>
 
-  <!-- 6. SCRIPTS ACTIVOS PARA EL AVANCE 2 (Carrito y CSR) -->
-  <script src="js/carrito.js"></script> <!-- ¡ESTE YA QUEDÓ DESCOMENTADO! -->
+  <!-- SCRIPTS ACTIVOS PARA EL AVANCE 2 (Carrito y CSR) -->
+  <script src="js/carrito.js"></script>
   <script src="js/csr.js"></script>
   
   <!-- SCRIPTS COMENTADOS HASTA FUTUROS AVANCES -->
@@ -106,7 +126,7 @@
   <!-- <script src="js/geolocalizacion.js"></script> -->
   <!-- <script src="js/app.js"></script> -->
   
-  <!-- 7. COMENTAMOS EL SERVICE WORKER -->
+  <!-- COMENTAMOS EL SERVICE WORKER -->
   <!--
   <script>
     if ("serviceWorker" in navigator) {
