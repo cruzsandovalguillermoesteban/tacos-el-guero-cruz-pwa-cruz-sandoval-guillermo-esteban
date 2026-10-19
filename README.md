@@ -14,7 +14,8 @@
 |---|---|---|
 | 1 | de78377 | 10/10/2026 |
 | 2 | 817ec7d | 16/10/2026 |
-
+| 2 | c0c4186 | 17/10/2026 |
+| 2 |  | 18/10/2026 |
 ## Comparación SSR vs CSR
 
 ### SSR (Django): los productos llegan escritos en el HTML
