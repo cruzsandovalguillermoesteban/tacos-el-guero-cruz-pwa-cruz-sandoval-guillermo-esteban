@@ -12,10 +12,8 @@
 
 | Avance | Hash del commit entregado | Fecha |
 |---|---|---|
-| 1 | de78377 | 10/10/2026 |
-| 2 | 817ec7d | 16/10/2026 |
-| 2 | c0c4186 | 17/10/2026 |
-| 2 | cdbef43 | 18/10/2026 |
+| 1 | de7f96a1| 10/10/2026 |
+| 2 | 817ec7d | 18/10/2026 |
 
 ## Comparación SSR vs CSR
 
