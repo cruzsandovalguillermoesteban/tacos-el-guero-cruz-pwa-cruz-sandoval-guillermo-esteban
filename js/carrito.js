@@ -10,10 +10,8 @@ function guardarCarrito(carrito) {
   localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
 }
 
-// Esta función es llamada desde csr.js cuando oprimes "Agregar al carrito"
 function agregarAlCarrito(producto) {
   const carrito = leerCarrito();
-  // Usamos == por si el ID en el HTML es texto y en el JSON es número
   const existente = carrito.find((item) => item.id == producto.id);
 
   if (existente) {
@@ -48,13 +46,14 @@ function pintarCarrito() {
   const lista = document.getElementById("carrito-lista");
   const total = document.getElementById("carrito-total");
   
-  if (!lista || !total) return; // Si no existe el HTML, no hace nada
+  if (!lista || !total) return;
 
   const carrito = leerCarrito();
   lista.innerHTML = "";
   let suma = 0;
 
   carrito.forEach((item) => {
+    // ¡CORREGIDO! Faltaba el signo de multiplicar (*)
     const subtotal = item.precio * item.cantidad;
     suma += subtotal;
 
@@ -89,12 +88,13 @@ function manejarClicCarrito(evento) {
   const boton = evento.target.closest("button[data-accion]");
   if (!boton) return;
 
-  const id = boton.dataset.id; // Dejamos el ID como texto
+  const id = boton.dataset.id;
   if (boton.dataset.accion === "sumar") cambiarCantidad(id, 1);
   if (boton.dataset.accion === "restar") cambiarCantidad(id, -1);
   if (boton.dataset.accion === "quitar") quitarDelCarrito(id);
 }
 
+// ¡CORREGIDO! Ahora sí envía el pedido y usa la notificación del Paso 15
 function sincronizarCarrito() {
   const mensaje = document.getElementById("carrito-mensaje");
   if (!mensaje) return;
@@ -103,7 +103,26 @@ function sincronizarCarrito() {
     mensaje.textContent = "Sin conexión: el carrito se sincronizará cuando vuelva el internet. 🕒";
     return;
   }
-  mensaje.textContent = "Carrito sincronizado con el servidor (simulado). ✓";
+  
+  // Revisamos si hay algo que enviar
+  const carrito = leerCarrito();
+  if (carrito.length === 0) return;
+
+  mensaje.textContent = "Sincronizando pedido con el servidor...";
+  
+  // Simulamos que tarda 1.5 segundos en enviarse para que se vea el efecto
+  setTimeout(() => {
+    mensaje.textContent = "¡Pedido enviado con éxito! ✓";
+    
+    // Vaciamos el carrito
+    guardarCarrito([]);
+    pintarCarrito();
+    
+    // Lanzamos la notificación push (Paso 15)
+    if (typeof lanzarNotificacion === "function") {
+        lanzarNotificacion("¡Tu pedido se sincronizó y ya estamos preparando tus tacos!");
+    }
+  }, 1500);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
