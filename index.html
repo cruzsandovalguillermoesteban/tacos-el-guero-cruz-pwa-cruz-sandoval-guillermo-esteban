@@ -7,10 +7,9 @@
   <title>Tacos el Güero Cruz — PWA</title>
   <meta name="description" content="Tacos el Güero: Los mejores tacos de asada, tripa y especialidades sonorenses.">
 
-  <!-- COMENTAMOS MANIFEST E ICONO -->
+  <!-- MANIFEST ACTIVADO -->
   <link rel="manifest" href="manifest.json"> 
   <meta name="theme-color" content="#DC2626">
-  <!-- <link rel="icon" href="icons/icon.svg" type="image/svg+xml"> -->
 
   <link rel="stylesheet" href="css/estilos.css">
 
@@ -42,8 +41,9 @@
     }
   </style>
 
-  <!-- COMENTAMOS EL MAPA -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"> -->
+  <!-- LIBRERÍAS DE MAPAS ACTIVADAS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 </head>
 <body>
 
@@ -97,7 +97,7 @@
     <!-- ---- Sección 3: Notificaciones ---- -->
     <section>
       <h2>Notificaciones de ofertas</h2>
-      <button id="btn-notificar" type="button">Activar notificaciones</button>
+      <button id="btn-notificar" type="button" style="background: #1C1917; color: white; padding: 8px 15px; border-radius: 5px;">Activar notificaciones</button>
       <p id="notificaciones-mensaje" class="mensaje"></p>
     </section>
 
@@ -105,7 +105,7 @@
     <section>
       <h2>Distancia a la sucursal</h2>
       <p class="sucursal-info">Sucursal única: <strong>Hermosillo, Sonora.</strong></p>
-      <button id="btn-ubicacion" type="button">Usar mi ubicación</button>
+      <button id="btn-ubicacion" type="button" style="background: #1C1917; color: white; padding: 8px 15px; border-radius: 5px;">Usar mi ubicación</button>
       <p id="ubicacion-mensaje" class="mensaje"></p>
       <div id="mapa-ruta" class="mapa" hidden></div>
     </section>
@@ -116,28 +116,20 @@
     <p>Alumno: Cruz Sandoval Guillermo Esteban</p>
   </footer>
 
-  <!-- SCRIPTS ACTIVOS PARA EL AVANCE 2 (Carrito y CSR) -->
+  <!-- SCRIPTS ACTIVOS PARA LA PWA COMPLETA -->
   <script src="js/carrito.js"></script>
   <script src="js/csr.js"></script>
-  
-  <!-- SCRIPTS COMENTADOS HASTA FUTUROS AVANCES -->
   <script src="js/notificaciones.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  
+  <!-- LIBRERÍAS JS DE MAPAS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-  <script src="js/geolocalizacion.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
   <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+  
+  <!-- SCRIPTS DE GEOLOCALIZACIÓN Y ESTADO DE RED -->
+  <script src="js/geolocalizacion.js"></script>
   <script src="js/app.js"></script> 
   
-  <!-- COMENTAMOS EL SERVICE WORKER -->
-  <!--
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js")
-        .then((registro) => console.log("Service Worker registrado con éxito:", registro.scope))
-        .catch((error) => console.error("No se pudo registrar el Service Worker:", error));
-    }
-  </script>
-  -->
+  <!-- REGISTRO DEL SERVICE WORKER EN UNA SOLA LÍNEA (Paso 19) -->
+  <script>navigator.serviceWorker.register("sw.js");</script>
 </body>
 </html>
