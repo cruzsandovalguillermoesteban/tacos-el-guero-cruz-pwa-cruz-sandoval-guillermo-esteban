@@ -12,9 +12,9 @@
 
 | Avance | Hash del commit entregado | Fecha |
 |---|---|---|
-| 1 | de7f96a1| 10/10/2026 |
+| 1 | e7f96a1 | 10/10/2026 |
 | 2 | 817ec7d | 18/10/2026 |
-
+| 3 | be0ad97 | 18/10/2026 |
 ## Comparación SSR vs CSR
 
 ### SSR (Django): los productos llegan escritos en el HTML
@@ -29,3 +29,15 @@
 
 ### sw.js: Workbox precachea el catálogo y las fotos
 ![Código fuente sw.js](docs/captura-sw.png)
+
+## Versión Publica (avance 4)
+### Index.html en Github Pages
+![Código fuente index.html](docs/captura-pages-index.png)
+
+### Manifest.Json en Github Pages
+![Código fuente manifest.json](docs/captura-pages-manifest.png)
+
+### App instalada en el celular
+![Código fuente manifest.json](docs/captura-celular.png)
+
+
