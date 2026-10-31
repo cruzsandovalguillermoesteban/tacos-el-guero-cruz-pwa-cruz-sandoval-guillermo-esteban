@@ -1,7 +1,7 @@
 module.exports = {
   globDirectory: ".",
   globPatterns: [
-    "**/*.{html,css,js,json,jpg,jpeg,png,webp,svg}"
+    "**/*.{html,css,js,json,jpg,jpeg,png,webp,svg,ico}"
   ],
   globIgnores: [
     "docs/**",
@@ -13,6 +13,7 @@ module.exports = {
   swDest: "sw.js",
   skipWaiting: true,
   clientsClaim: true,
+  navigateFallback: "index.html",
   runtimeCaching: [
     {
       urlPattern: /^https:\/\/(cdnjs\.cloudflare\.com|unpkg\.com)\/.*/i,
