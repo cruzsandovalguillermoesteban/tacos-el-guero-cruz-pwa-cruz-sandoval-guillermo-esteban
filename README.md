@@ -41,3 +41,22 @@
 ![Código fuente manifest.json](docs/captura-celular.png)
 
 
+## Guía de Instalación y Uso — Tacos el Güero Cruz PWA
+
+### Requisitos previos
+* Dispositivo móvil (Android con Chrome o iOS con Safari) o computadora con navegador moderno.
+* Conexión a internet para la primera carga.
+
+### Pasos para instalar en Celular (Android / Chrome)
+1. Abre el navegador Chrome e ingresa a la URL: `https://cruzsandovalguillermoesteban.github.io/tacos-el-guero-cruz-pwa-cruz-sandoval-guillermo-esteban/`
+2. Despliega el menú de opciones (tres puntos superiores).
+3. Selecciona "Instalar aplicación" o "Agregar a la pantalla principal".
+4. Confirma la instalación. El ícono de Tacos el Güero Cruz aparecerá en tu menú de aplicaciones.
+
+### Pasos para instalar en Celular (iPhone / Safari)
+1. Abre Safari e ingresa a la URL del proyecto.
+2. Toca el botón de Compartir (cuadro con flecha hacia arriba).
+3. Selecciona la opción "Agregar al inicio".
+
+### Uso Offline
+Una vez instalada, la app cacheará el catálogo y los recursos mediante el Service Worker generado con Workbox. Podrás abrirla directamente desde el ícono en tu pantalla de inicio incluso sin conexión a internet.
